@@ -1,8 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { MyContext } from "./MyContext";
 
 function App() {
+  const { message } = React.useContext(MyContext);
   return (
     <div className="App">
       <header className="App-header">
@@ -10,6 +12,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <p>Message from MyContext: {message}</p>
         <a
           className="App-link"
           href="https://reactjs.org"
